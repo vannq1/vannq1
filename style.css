@@ -62,7 +62,7 @@ header {
     gap: 16px;
 }
 
-community_body {
+.community_body {
     gap: 160px;
 }
 
@@ -158,12 +158,35 @@ community_body {
     margin-bottom: 12px;
 }
 
+.memu_mobile {
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
     }
 
+    .memu_mobile {
+        display: block;
+    }
+
+    .memu_mobile:hover+.menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero-layout img {
+        width: 100%;
+    }
+
+   
+    .frame_layout img {
+        display: none;
+    }
 
     .hero-layout {
         flex-direction: column;
@@ -172,6 +195,7 @@ community_body {
 
     .frame_layout {
         flex-direction: column;
+        padding: 0px;
     }
 
     .header_branch {
@@ -183,17 +207,25 @@ community_body {
         flex-direction: column;
         padding: 0px;
     }
+
     .header_menu {
+        margin: 15px 5px;
+        text-align: center;
         flex-direction: column;
     }
+
     .container {
         flex-direction: column;
     }
+
     .space-center {
         flex-direction: column;
     }
-    
-    
+
+    .mobile h1 {
+        font-size: 48px
+    }
+
 
 }
 
@@ -219,17 +251,20 @@ community_body {
         flex-direction: column;
         padding: 0px;
     }
+
     .header_menu {
         flex-direction: column;
     }
+
     .container {
         flex-direction: column;
     }
+
     .space-center {
         flex-direction: column;
     }
 
- 
+
 }
 
 @media screen and (min-width: 1024px) {}
